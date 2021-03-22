@@ -8,20 +8,117 @@
 </head>
 <body>
     <form action="#">
+        <div>
         <label for="message-type">Тип повідомлення:</label>
-        <input type="text" name="message-type" id="message-type" >
-        <label for="">Район:</label>
-        <input type="text" name="area" id="area" >
-        <label for="event-date">Дата події:</label>
-        <input type="text" name="event-date" id="event-date" >
-        <label for="event-time">Час події:</label>
-        <input type="text" name="event-time" id="event-time" >
-        <label for="event-code">Код події:</label> 
-        <input type="text" name="event-code" id="event-code" >
-        <label for="time-to-fix">Час на усунення (за потреби):</label>
-        <input type="text" name="time-to-fix" id="time-to-fix" >
-        <label for="event-description">Текстовий опис подій:</label>
-        <textarea name="event-description" id="event-description" cols="30" rows="10"></textarea>
+        <select name="message-type" id="message-type">
+        <option value="I">'I' Інформаційне повідомлення</option>
+        <option value="!">'!' Повідомлення про інцидент</option>
+        <option value="R">'R' Повідомлення про усунення інциденту</option>
+        </select>
+        </div>
+        <div>
+            <label for="">Район:</label>
+            <select id="area" name="area">
+                <option value="25001">25001 Головне</option>
+                <option value="25015">25015 Бахмацький</option>
+                <option value="25025">25025 Бобровицький</option>
+                <option value="25035">25035 Борзнянський</option>
+                <option value="25045">25045 Варвинський</option>
+                <option value="25055">25055 Городнянський</option>
+                <option value="25065">25065 Ічнянський</option>
+                <option value="25075">25075 Козелецький</option>
+                <option value="25085">25085 Коропський</option>
+                <option value="25095">25095 Корюківський</option>
+                <option value="25105">25105 Куликівський</option>
+                <option value="25115">25115 Менський</option>
+                <option value="25135">25135 Н-Сіверський</option>
+                <option value="25145">25145 Носівський</option>
+                <option value="25165">25165 Ріпкинський</option>
+                <option value="25175">25175 Семенівський</option>
+                <option value="25185">25185 Сосницький</option>
+                <option value="25195">25195 Срібнянський</option>
+                <option value="25205">25205 Талалаївський</option>
+                <option value="25215">25215 Чернігівський</option>
+                <option value="25225">25225 Сновськ</option>
+                <option value="25271">25271 Чернігів. Мазепи 19(ЦНАП)</option>
+                <option value="25272">25272 Чернігів. Мазепи 19(Військові)</option>
+                <option value="25273">25273 Чернігів, пр.Миру 44</option>
+                <option value="25274">25274 Чернігів. Пр. Миру 116-а</option>
+                <option value="25285">25285 Нежин</option>
+                <option value="25295">25295 Прилуки</option>
+            </select>
+            </div>
+           
+        <div>
+            <label for="event-date">Дата події:</label>
+            <input type="date" name="event-date" id="event-date" >
+        </div>
+        <div>
+            <label for="event-time">Час події:</label>
+            <input type="time" name="event-time" id="event-time" >
+        </div>
+        <div>
+            <label for="event-code">Код події:</label>
+                <select name="event-code" id="event-code">
+                    <optgroup label="A - Електропостачання:">
+                    <option value="A01">A01 Відсутність електроенергії в приміщенні</option>
+                    <option value="A02">A02 Відсутність електроенергії в будівлі</option>
+                    <option value="A03">A03 Відсутність електроенергії в мікрорайоні</option>
+                    <option value="A04">A04 Відсутність електроенергії в місті</option>
+                    </optgroup>
+                    <optgroup label="B - Робота обладнання:">
+                    <option value="B01">B01 Проблеми роботи HW серверного обладнання (вихід з ладу MB, HDD, CPU)</option>
+                    <option value="B02">B02 Проблеми роботи SW серверного обладнання (не завантажується OS, не запускається прикладний застосунок, злетіла
+                    ліцензія)</option>
+                    <option value="B03">B03 Проблеми роботи HW мережевого обладнання (вихід з ладу)</option>
+                    <option value="B04">B04 Проблеми роботи SW мережевого обладнання (збій налаштування, невідповідність налаштування)</option>
+                    </optgroup>
+                    <optgroup label="C - Робота мережі:">
+                    <option value="C01">C01 Проблеми роботи локальної мережі (фізичні пошкодження)</option>
+                    <option value="C02">C02 Проблеми роботи корпоративної мережі (погіршення роботи каналів зв’язку)</option>
+                    <option value="C03">C03 Проблеми роботи мережі провайдера</option>
+                    </optgroup>
+                    <optgroup label="D - Процеси обслуговування громадян:">
+                    <option value="D01">D01 Перевищення часу очікування в черзі</option>
+                    <option value="D02">D02 Порушення графіку обслуговування</option>
+                    <option value="D03">D03 Проблеми завантаженості працівників</option>
+                    <option value="D04">D04 Перевищення тривалості обслуговування</option>
+                    </optgroup>
+                    <optgroup label="E - Облаштування сервісних центрів:">
+                    <option value="E01">E01 Проблеми в роботі системи електронної черги</option>
+                    <option value="E02">E02 Забезпеченість технічними засобами</option>
+                    <option value="E03">E03 Стан залу обслуговування</option>
+                    <option value="E04">E04 Забезпеченість засобами гігієни</option>
+                    </optgroup>
+                    <optgroup label="F - Організація роботи сервісних центрів:">
+                    <option value="F01">F01 Відкриття із запізненням</option>
+                    <option value="F02">F02 Завчасне завершення роботи</option>
+                    <option value="F03">F03 Відсутність працівників</option>
+                    <option value="F04">F04 Ремонтні роботи</option>
+                    </optgroup>
+                    <optgroup label="G - Дотримання заходів щодо запобігання поширенню Covid-19">
+                    <option value="G01">G01 Дотримання соціальної дистанції</option>
+                    <option value="G02">G02 Відсутність або неналежне використання засобів індивідуального захисту</option>
+                    <option value="G03">G03 Карантинні заходи</option>
+                    </optgroup>
+                </select>
+        </div>
+        <div>
+            <label for="time-to-fix">Час на усунення (за потреби):</label>
+            <input type="text" name="time-to-fix" id="time-to-fix" >
+        </div>
+        <div>
+            <label for="event-description">Текстовий опис подій:</label>
+            <textarea name="event-description" id="event-description" cols="30" rows="10"></textarea>
+        </div>
+        <button id="butt" type="button">Надіслати</button>
     </form>
+    <div id="str"></div>
 </body>
+<script>
+    butt.onclick = function () {
+            var val = document.getElementById('event-code').value;
+            document.getElementById('str').innerHTML = "Вы ввели: " + val;
+        };
+</script>
 </html>
