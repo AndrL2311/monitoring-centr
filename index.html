@@ -116,8 +116,10 @@
     <div id="str"></div>
     <script>
         butt.onclick = function () {
-            var val = document.getElementById('event-code').value;
-            document.getElementById('str').innerHTML = "Вы ввели: " + val;
+            var val = document.getElementById('message-type').value;
+            var val1 = document.getElementById('area').value;
+            var val2 = document.getElementById('event-date').value;
+            document.getElementById('str').innerHTML = "Вы ввели: " + val + ";" + val1 + ";" + val2;
         };
     </script>
 </body>
