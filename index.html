@@ -17,7 +17,7 @@
         </select>
         </div>
         <div>
-            <label for="">Район:</label>
+            <label for="area">Район:</label>
             <select id="area" name="area">
                 <option value="25001">25001 Головне</option>
                 <option value="25015">25015 Бахмацький</option>
@@ -114,11 +114,12 @@
         <button id="butt" type="button">Надіслати</button>
     </form>
     <div id="str"></div>
-</body>
-<script>
-    butt.onclick = function () {
+    <script>
+        butt.onclick = function () {
             var val = document.getElementById('event-code').value;
             document.getElementById('str').innerHTML = "Вы ввели: " + val;
         };
-</script>
+    </script>
+</body>
+
 </html>
