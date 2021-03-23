@@ -16,10 +16,11 @@
         <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-    <form action="#">
+<div class="box-form">
+    <form class="form-input" action="#">
         <div>
         <label for="message-type">Тип повідомлення:</label>
-        <select name="message-type" id="message-type">
+        <select class="pole" name="message-type" id="message-type">
         <option value="I">'I' Інформаційне повідомлення</option>
         <option value="!">'!' Повідомлення про інцидент</option>
         <option value="R">'R' Повідомлення про усунення інциденту</option>
@@ -27,7 +28,7 @@
         </div>
         <div>
             <label for="area">Район:</label>
-            <select id="area" name="area">
+            <select class="pole" id="area" name="area">
                 <option value="25001">25001 Головне</option>
                 <option value="25015">25015 Бахмацький</option>
                 <option value="25025">25025 Бобровицький</option>
@@ -60,15 +61,15 @@
            
         <div>
             <label for="event-date">Дата події:</label>
-            <input type="date" name="event-date" id="event-date" >
+            <input class="pole"type="date" name="event-date" id="event-date" >
         </div>
         <div>
             <label for="event-time">Час події:</label>
-            <input type="time" name="event-time" id="event-time" value="08:00">
+            <input class="pole" type="time" name="event-time" id="event-time" value="08:00">
         </div>
         <div>
             <label for="event-code">Код події:</label>
-                <select name="event-code" id="event-code">
+                <select class="pole" name="event-code" id="event-code">
                     <optgroup label="A - Електропостачання:">
                     <option value="A01">A01 Відсутність електроенергії в приміщенні</option>
                     <option value="A02">A02 Відсутність електроенергії в будівлі</option>
@@ -114,17 +115,17 @@
         </div>
         <div>
             <label for="time-to-fix">Час на усунення (за потреби):</label>
-            <input type="text" name="time-to-fix" id="time-to-fix" >
+            <input class="pole" type="text" name="time-to-fix" id="time-to-fix" >
         </div>
         <div>
             <label for="event-description">Текстовий опис подій:</label>
-            <textarea name="event-description" id="event-description" cols="30" rows="10"></textarea>
+            <textarea class="pole-textarea" name="event-description" id="event-description" cols="30" rows="10"></textarea>
         </div>
-        <button id="butt" type="button">Сформувати повідомлення та скопіювати в буфер обміну </button>
+        <button class="button" id="butt" type="button">Сформувати повідомлення та скопіювати в буфер обміну </button>
         <!-- <button onclick="copytext('#str')" type="button"  >Скопіювати в буфер</button> -->
     </form>
     <div id="str"></div>
-
+</div>
    <script>
         butt.onclick = function () {
             var val = document.getElementById('message-type').value;
