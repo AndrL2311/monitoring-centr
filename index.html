@@ -20,15 +20,15 @@
     <form class="form-input" action="#">
         <div>
         <label for="message-type">Тип повідомлення:</label>
-        <select class="pole" name="message-type" id="message-type">
-        <option value="I">'I' Інформаційне повідомлення</option>
-        <option value="!">'!' Повідомлення про інцидент</option>
-        <option value="R">'R' Повідомлення про усунення інциденту</option>
+        <select class="pole" name="message-type" id="message-type" required>
+        <option value="I">I Інформаційне повідомлення</option>
+        <option value="!">! Повідомлення про інцидент</option>
+        <option value="R">R Повідомлення про усунення інциденту</option>
         </select>
         </div>
         <div>
             <label for="area">Район:</label>
-            <select class="pole" id="area" name="area">
+            <select class="pole" id="area" name="area" required>
                 <option value="25001">25001 Головне</option>
                 <option value="25015">25015 Бахмацький</option>
                 <option value="25025">25025 Бобровицький</option>
@@ -61,15 +61,15 @@
            
         <div>
             <label for="event-date">Дата події:</label>
-            <input class="pole"type="date" name="event-date" id="event-date" >
+            <input class="pole"type="date" name="event-date" id="event-date" required>
         </div>
         <div>
             <label for="event-time">Час події:</label>
-            <input class="pole" type="time" name="event-time" id="event-time" value="08:00">
+            <input class="pole" type="time" name="event-time" id="event-time" value="08:00" required>
         </div>
         <div>
             <label for="event-code">Код події:</label>
-                <select class="pole" name="event-code" id="event-code">
+                <select class="pole" name="event-code" id="event-code" required>
                     <optgroup label="A - Електропостачання:">
                     <option value="A01">A01 Відсутність електроенергії в приміщенні</option>
                     <option value="A02">A02 Відсутність електроенергії в будівлі</option>
