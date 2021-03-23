@@ -1,10 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Моніторинговий центр</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+            integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
+            crossorigin="anonymous" />
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+            rel="stylesheet">
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
+        <script src="./js/jquery-3.6.0.min.js"></script>
+        <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
     <form action="#">
@@ -55,7 +64,7 @@
         </div>
         <div>
             <label for="event-time">Час події:</label>
-            <input type="time" name="event-time" id="event-time" >
+            <input type="time" name="event-time" id="event-time" value="08:00">
         </div>
         <div>
             <label for="event-code">Код події:</label>
@@ -111,17 +120,68 @@
             <label for="event-description">Текстовий опис подій:</label>
             <textarea name="event-description" id="event-description" cols="30" rows="10"></textarea>
         </div>
-        <button id="butt" type="button">Надіслати</button>
+        <button id="butt" type="button">Сформувати повідомлення та скопіювати в буфер обміну </button>
+        <!-- <button onclick="copytext('#str')" type="button"  >Скопіювати в буфер</button> -->
     </form>
     <div id="str"></div>
-    <script>
+
+   <script>
         butt.onclick = function () {
             var val = document.getElementById('message-type').value;
             var val1 = document.getElementById('area').value;
             var val2 = document.getElementById('event-date').value;
-            document.getElementById('str').innerHTML = "Вы ввели: " + val + ";" + val1 + ";" + val2;
-        };
+            var val20 =  val2.substr(8, 2) + "." + val2.substr(5, 2) + "." + val2.substr(0, 4)
+            var val3 = document.getElementById('event-time').value;
+            var val4 = document.getElementById('event-code').value;
+            var val5 = document.getElementById('time-to-fix').value;
+            var val6 = document.getElementById('event-description').value;
+
+            if (val1 ==='25001'){ var val60 = "CN-00-Golovne"}
+            if (val1 === '25015') { var val60 = "CN-01-bachmach" }
+            if (val1 === '25025') { var val60 = "CN-02-bobrovytsia" }
+            if (val1 === '25035') { var val60 = "CN-03-borzna" }
+            if (val1 === '25045') { var val60 = "CN-04-varva" }
+            if (val1 === '25055') { var val60 = "CN-05-horodnia" }
+            if (val1 === '25065') { var val60 = "CN-06-ichnia" }
+            if (val1 === '25075') { var val60 = "CN-07-kozelets" }
+            if (val1 === '25085') { var val60 = "CN-08-korop" }
+            if (val1 === '25095') { var val60 = "CN-09-koriukivka" }
+            if (val1 === '25105') { var val60 = "CN-10-kulykivka" }
+            if (val1 === '25115') { var val60 = "CN-11-mena" }
+            if (val1 === '25135') { var val60 = "CN-13-n-siverskyi" }
+            if (val1 === '25145') { var val60 = "CN-14-nosivka" }
+            if (val1 === '25165') { var val60 = "CN-16-ripky" }
+            if (val1 === '25175') { var val60 = "CN-17-semenivka" }
+            if (val1 === '25185') { var val60 = "CN-18-sosnytsia" }
+            if (val1 === '25195') { var val60 = "CN-19-sribne" }
+            if (val1 === '25205') { var val60 = "CN-20-talalaivka" }
+            if (val1 === '25215') { var val60 = "CN-21-chernihivskyi" }
+            if (val1 === '25225') { var val60 = "CN-22-shchors" }
+            if (val1 === '25271') { var val60 = "CN-27-1-chernihiv_CNAP" }
+            if (val1 === '25272') { var val60 = "CN-27-2-chernihiv_VOEN" }
+            if (val1 === '25273') { var val60 = "CN-27-3-mira44" }
+            if (val1 === '25274') { var val60 = "СN-27-4-mira116" }
+            if (val1 === '25285') { var val60 = "CN-28-nizhyn" }
+            if (val1 === '25295') { var val60 = "CN-29-pryluky" }
+
+            
+            
+        document.getElementById('str').innerHTML = val + ";" + val1 + ";" + val20 + " "+ val3 + ";" + val4 + ";" + val5 + ";" + val60 + " " + val6;
+        // копируем в буфер обмена
+        copytext('#str');
+         
+    };
+    // Функция копирования в буфер обмена используем библиотеку jQuery 
+   function copytext(el) {
+        var $tmp = $("<textarea>");
+        $("body").append($tmp);
+        $tmp.val($(el).text()).select();
+        document.execCommand("copy");
+        $tmp.remove();
+    };
+
     </script>
+
 </body>
 
 </html>
