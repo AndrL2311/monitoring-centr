@@ -1,188 +1,312 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Моніторинговий центр</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
-            integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
-            crossorigin="anonymous" />
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
-            rel="stylesheet">
-        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
-        <script src="./js/jquery-3.6.0.min.js"></script>
-        <link rel="stylesheet" href="./css/styles.css">
-</head>
-<body>
-<div class="box-form">
-    <form class="form-input" action="#">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+      integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <div class="box-form">
+      <form class="form-input" action="#">
         <div>
-        <label for="message-type">Тип повідомлення:</label>
-        <select class="pole" name="message-type" id="message-type">
-        <option value="I">I Інформаційне повідомлення</option>
-        <option value="!">! Повідомлення про інцидент</option>
-        <option value="R">R Повідомлення про усунення інциденту</option>
-        </select>
+          <label for="message-type">Тип повідомлення:</label>
+          <select class="pole" name="message-type" id="message-type">
+            <option value="I">I Інформаційне повідомлення</option>
+            <option value="!">! Повідомлення про інцидент</option>
+            <option value="R">R Повідомлення про усунення інциденту</option>
+          </select>
         </div>
         <div>
-            <label for="area">Район:</label>
-            <select class="pole" id="area" name="area">
-                <option value="25001">25001 Головне</option>
-                <option value="25015">25015 Бахмацький</option>
-                <option value="25025">25025 Бобровицький</option>
-                <option value="25035">25035 Борзнянський</option>
-                <option value="25045">25045 Варвинський</option>
-                <option value="25055">25055 Городнянський</option>
-                <option value="25065">25065 Ічнянський</option>
-                <option value="25075">25075 Козелецький</option>
-                <option value="25085">25085 Коропський</option>
-                <option value="25095">25095 Корюківський</option>
-                <option value="25105">25105 Куликівський</option>
-                <option value="25115">25115 Менський</option>
-                <option value="25135">25135 Н-Сіверський</option>
-                <option value="25145">25145 Носівський</option>
-                <option value="25165">25165 Ріпкинський</option>
-                <option value="25175">25175 Семенівський</option>
-                <option value="25185">25185 Сосницький</option>
-                <option value="25195">25195 Срібнянський</option>
-                <option value="25205">25205 Талалаївський</option>
-                <option value="25215">25215 Чернігівський</option>
-                <option value="25225">25225 Сновськ</option>
-                <option value="25271">25271 Чернігів. Мазепи 19(ЦНАП)</option>
-                <option value="25272">25272 Чернігів. Мазепи 19(Військові)</option>
-                <option value="25273">25273 Чернігів, пр.Миру 44</option>
-                <option value="25274">25274 Чернігів. Пр. Миру 116-а</option>
-                <option value="25285">25285 Нежин</option>
-                <option value="25295">25295 Прилуки</option>
-            </select>
-            </div>
-           
+          <label for="area">Район:</label>
+          <select class="pole" id="area" name="area">
+            <option value="25001">25001 Головне</option>
+            <option value="25015">25015 Бахмацький</option>
+            <option value="25025">25025 Бобровицький</option>
+            <option value="25035">25035 Борзнянський</option>
+            <option value="25045">25045 Варвинський</option>
+            <option value="25055">25055 Городнянський</option>
+            <option value="25065">25065 Ічнянський</option>
+            <option value="25075">25075 Козелецький</option>
+            <option value="25085">25085 Коропський</option>
+            <option value="25095">25095 Корюківський</option>
+            <option value="25105">25105 Куликівський</option>
+            <option value="25115">25115 Менський</option>
+            <option value="25135">25135 Н-Сіверський</option>
+            <option value="25145">25145 Носівський</option>
+            <option value="25165">25165 Ріпкинський</option>
+            <option value="25175">25175 Семенівський</option>
+            <option value="25185">25185 Сосницький</option>
+            <option value="25195">25195 Срібнянський</option>
+            <option value="25205">25205 Талалаївський</option>
+            <option value="25215">25215 Чернігівський</option>
+            <option value="25225">25225 Сновськ</option>
+            <option value="25271">25271 Чернігів. Мазепи 19(ЦНАП)</option>
+            <option value="25272">25272 Чернігів. Мазепи 19(Військові)</option>
+            <option value="25273">25273 Чернігів, пр.Миру 44</option>
+            <option value="25274">25274 Чернігів. Пр. Миру 116-а</option>
+            <option value="25285">25285 Нежин</option>
+            <option value="25295">25295 Прилуки</option>
+          </select>
+        </div>
+
         <div>
-            <label for="event-date">Дата події:</label>
-            <input class="pole" type="date" name="event-date" id="event-date">
+          <label for="event-date">Дата події:</label>
+          <input class="pole" type="date" name="event-date" id="event-date" />
         </div>
         <div>
-            <label for="event-time">Час події:</label>
-            <input class="pole" type="time" name="event-time" id="event-time" value="08:00">
+          <label for="event-time">Час події:</label>
+          <input
+            class="pole"
+            type="time"
+            name="event-time"
+            id="event-time"
+            value="08:00"
+          />
         </div>
         <div>
-            <label for="event-code">Код події:</label>
-                <select class="pole" name="event-code" id="event-code">
-                    <optgroup label="A - Електропостачання:">
-                    <option value="A01">A01 Відсутність електроенергії в приміщенні</option>
-                    <option value="A02">A02 Відсутність електроенергії в будівлі</option>
-                    <option value="A03">A03 Відсутність електроенергії в мікрорайоні</option>
-                    <option value="A04">A04 Відсутність електроенергії в місті</option>
-                    </optgroup>
-                    <optgroup label="B - Робота обладнання:">
-                    <option value="B01">B01 Проблеми роботи HW серверного обладнання (вихід з ладу MB, HDD, CPU)</option>
-                    <option value="B02">B02 Проблеми роботи SW серверного обладнання (не завантажується OS, не запускається прикладний застосунок, злетіла
-                    ліцензія)</option>
-                    <option value="B03">B03 Проблеми роботи HW мережевого обладнання (вихід з ладу)</option>
-                    <option value="B04">B04 Проблеми роботи SW мережевого обладнання (збій налаштування, невідповідність налаштування)</option>
-                    </optgroup>
-                    <optgroup label="C - Робота мережі:">
-                    <option value="C01">C01 Проблеми роботи локальної мережі (фізичні пошкодження)</option>
-                    <option value="C02">C02 Проблеми роботи корпоративної мережі (погіршення роботи каналів зв’язку)</option>
-                    <option value="C03">C03 Проблеми роботи мережі провайдера</option>
-                    </optgroup>
-                    <optgroup label="D - Процеси обслуговування громадян:">
-                    <option value="D01">D01 Перевищення часу очікування в черзі</option>
-                    <option value="D02">D02 Порушення графіку обслуговування</option>
-                    <option value="D03">D03 Проблеми завантаженості працівників</option>
-                    <option value="D04">D04 Перевищення тривалості обслуговування</option>
-                    </optgroup>
-                    <optgroup label="E - Облаштування сервісних центрів:">
-                    <option value="E01">E01 Проблеми в роботі системи електронної черги</option>
-                    <option value="E02">E02 Забезпеченість технічними засобами</option>
-                    <option value="E03">E03 Стан залу обслуговування</option>
-                    <option value="E04">E04 Забезпеченість засобами гігієни</option>
-                    </optgroup>
-                    <optgroup label="F - Організація роботи сервісних центрів:">
-                    <option value="F01">F01 Відкриття із запізненням</option>
-                    <option value="F02">F02 Завчасне завершення роботи</option>
-                    <option value="F03">F03 Відсутність працівників</option>
-                    <option value="F04">F04 Ремонтні роботи</option>
-                    </optgroup>
-                    <optgroup label="G - Дотримання заходів щодо запобігання поширенню Covid-19">
-                    <option value="G01">G01 Дотримання соціальної дистанції</option>
-                    <option value="G02">G02 Відсутність або неналежне використання засобів індивідуального захисту</option>
-                    <option value="G03">G03 Карантинні заходи</option>
-                    </optgroup>
-                </select>
+          <label for="event-code">Код події:</label>
+          <select class="pole" name="event-code" id="event-code">
+            <optgroup label="A - Електропостачання:">
+              <option value="A01">
+                A01 Відсутність електроенергії в приміщенні
+              </option>
+              <option value="A02">
+                A02 Відсутність електроенергії в будівлі
+              </option>
+              <option value="A03">
+                A03 Відсутність електроенергії в мікрорайоні
+              </option>
+              <option value="A04">
+                A04 Відсутність електроенергії в місті
+              </option>
+            </optgroup>
+            <optgroup label="B - Робота обладнання:">
+              <option value="B01">
+                B01 Проблеми роботи HW серверного обладнання (вихід з ладу MB,
+                HDD, CPU)
+              </option>
+              <option value="B02">
+                B02 Проблеми роботи SW серверного обладнання (не завантажується
+                OS, не запускається прикладний застосунок, злетіла ліцензія)
+              </option>
+              <option value="B03">
+                B03 Проблеми роботи HW мережевого обладнання (вихід з ладу)
+              </option>
+              <option value="B04">
+                B04 Проблеми роботи SW мережевого обладнання (збій налаштування,
+                невідповідність налаштування)
+              </option>
+            </optgroup>
+            <optgroup label="C - Робота мережі:">
+              <option value="C01">
+                C01 Проблеми роботи локальної мережі (фізичні пошкодження)
+              </option>
+              <option value="C02">
+                C02 Проблеми роботи корпоративної мережі (погіршення роботи
+                каналів зв’язку)
+              </option>
+              <option value="C03">C03 Проблеми роботи мережі провайдера</option>
+            </optgroup>
+            <optgroup label="D - Процеси обслуговування громадян:">
+              <option value="D01">
+                D01 Перевищення часу очікування в черзі
+              </option>
+              <option value="D02">D02 Порушення графіку обслуговування</option>
+              <option value="D03">
+                D03 Проблеми завантаженості працівників
+              </option>
+              <option value="D04">
+                D04 Перевищення тривалості обслуговування
+              </option>
+            </optgroup>
+            <optgroup label="E - Облаштування сервісних центрів:">
+              <option value="E01">
+                E01 Проблеми в роботі системи електронної черги
+              </option>
+              <option value="E02">
+                E02 Забезпеченість технічними засобами
+              </option>
+              <option value="E03">E03 Стан залу обслуговування</option>
+              <option value="E04">E04 Забезпеченість засобами гігієни</option>
+            </optgroup>
+            <optgroup label="F - Організація роботи сервісних центрів:">
+              <option value="F01">F01 Відкриття із запізненням</option>
+              <option value="F02">F02 Завчасне завершення роботи</option>
+              <option value="F03">F03 Відсутність працівників</option>
+              <option value="F04">F04 Ремонтні роботи</option>
+            </optgroup>
+            <optgroup
+              label="G - Дотримання заходів щодо запобігання поширенню Covid-19"
+            >
+              <option value="G01">G01 Дотримання соціальної дистанції</option>
+              <option value="G02">
+                G02 Відсутність або неналежне використання засобів
+                індивідуального захисту
+              </option>
+              <option value="G03">G03 Карантинні заходи</option>
+            </optgroup>
+          </select>
         </div>
         <div>
-            <label for="time-to-fix">Час на усунення (за потреби):</label>
-            <input class="pole" type="text" name="time-to-fix" id="time-to-fix" >
+          <label for="time-to-fix">Час на усунення (за потреби):</label>
+          <input class="pole" type="text" name="time-to-fix" id="time-to-fix" />
         </div>
         <div>
-            <label for="event-description">Текстовий опис подій:</label>
-            <textarea class="pole-textarea" name="event-description" id="event-description" cols="30" rows="10"></textarea>
+          <label for="event-description">Текстовий опис подій:</label>
+          <textarea
+            class="pole-textarea"
+            name="event-description"
+            id="event-description"
+            cols="30"
+            rows="10"
+          ></textarea>
         </div>
-        <button class="button" id="butt" type="button">Сформувати повідомлення та скопіювати в буфер обміну </button>
+        <button class="button" id="butt" type="button">
+          Сформувати повідомлення та скопіювати в буфер обміну
+        </button>
         <!-- <button onclick="copytext('#str')" type="button"  >Скопіювати в буфер</button> -->
-    </form>
-    <div id="str"></div>
-</div>
-   <script>
-        butt.onclick = function () {
-            var val = document.getElementById('message-type').value;
-            var val1 = document.getElementById('area').value;
-            var val2 = document.getElementById('event-date').value;
-            var val20 =  val2.substr(8, 2) + "." + val2.substr(5, 2) + "." + val2.substr(0, 4)
-            var val3 = document.getElementById('event-time').value;
-            var val4 = document.getElementById('event-code').value;
-            var val5 = document.getElementById('time-to-fix').value;
-            var val6 = document.getElementById('event-description').value;
+      </form>
+      <div id="str"></div>
+    </div>
+    <script>
+      butt.onclick = function () {
+        var val = document.getElementById('message-type').value;
+        var val1 = document.getElementById('area').value;
+        var val2 = document.getElementById('event-date').value;
+        var val20 =
+          val2.substr(8, 2) + '.' + val2.substr(5, 2) + '.' + val2.substr(0, 4);
+        var val3 = document.getElementById('event-time').value;
+        var val4 = document.getElementById('event-code').value;
+        var val5 = document.getElementById('time-to-fix').value;
+        var val6 = document.getElementById('event-description').value;
 
-            if (val1 ==='25001'){ var val60 = "CN-00-Golovne"}
-            if (val1 === '25015') { var val60 = "CN-01-bachmach" }
-            if (val1 === '25025') { var val60 = "CN-02-bobrovytsia" }
-            if (val1 === '25035') { var val60 = "CN-03-borzna" }
-            if (val1 === '25045') { var val60 = "CN-04-varva" }
-            if (val1 === '25055') { var val60 = "CN-05-horodnia" }
-            if (val1 === '25065') { var val60 = "CN-06-ichnia" }
-            if (val1 === '25075') { var val60 = "CN-07-kozelets" }
-            if (val1 === '25085') { var val60 = "CN-08-korop" }
-            if (val1 === '25095') { var val60 = "CN-09-koriukivka" }
-            if (val1 === '25105') { var val60 = "CN-10-kulykivka" }
-            if (val1 === '25115') { var val60 = "CN-11-mena" }
-            if (val1 === '25135') { var val60 = "CN-13-n-siverskyi" }
-            if (val1 === '25145') { var val60 = "CN-14-nosivka" }
-            if (val1 === '25165') { var val60 = "CN-16-ripky" }
-            if (val1 === '25175') { var val60 = "CN-17-semenivka" }
-            if (val1 === '25185') { var val60 = "CN-18-sosnytsia" }
-            if (val1 === '25195') { var val60 = "CN-19-sribne" }
-            if (val1 === '25205') { var val60 = "CN-20-talalaivka" }
-            if (val1 === '25215') { var val60 = "CN-21-chernihivskyi" }
-            if (val1 === '25225') { var val60 = "CN-22-shchors" }
-            if (val1 === '25271') { var val60 = "CN-27-1-chernihiv_CNAP" }
-            if (val1 === '25272') { var val60 = "CN-27-2-chernihiv_VOEN" }
-            if (val1 === '25273') { var val60 = "CN-27-3-mira44" }
-            if (val1 === '25274') { var val60 = "СN-27-4-mira116" }
-            if (val1 === '25285') { var val60 = "CN-28-nizhyn" }
-            if (val1 === '25295') { var val60 = "CN-29-pryluky" }
+        if (val1 === '25001') {
+          var val60 = 'CN-00-Golovne';
+        }
+        if (val1 === '25015') {
+          var val60 = 'CN-01-bachmach';
+        }
+        if (val1 === '25025') {
+          var val60 = 'CN-02-bobrovytsia';
+        }
+        if (val1 === '25035') {
+          var val60 = 'CN-03-borzna';
+        }
+        if (val1 === '25045') {
+          var val60 = 'CN-04-varva';
+        }
+        if (val1 === '25055') {
+          var val60 = 'CN-05-horodnia';
+        }
+        if (val1 === '25065') {
+          var val60 = 'CN-06-ichnia';
+        }
+        if (val1 === '25075') {
+          var val60 = 'CN-07-kozelets';
+        }
+        if (val1 === '25085') {
+          var val60 = 'CN-08-korop';
+        }
+        if (val1 === '25095') {
+          var val60 = 'CN-09-koriukivka';
+        }
+        if (val1 === '25105') {
+          var val60 = 'CN-10-kulykivka';
+        }
+        if (val1 === '25115') {
+          var val60 = 'CN-11-mena';
+        }
+        if (val1 === '25135') {
+          var val60 = 'CN-13-n-siverskyi';
+        }
+        if (val1 === '25145') {
+          var val60 = 'CN-14-nosivka';
+        }
+        if (val1 === '25165') {
+          var val60 = 'CN-16-ripky';
+        }
+        if (val1 === '25175') {
+          var val60 = 'CN-17-semenivka';
+        }
+        if (val1 === '25185') {
+          var val60 = 'CN-18-sosnytsia';
+        }
+        if (val1 === '25195') {
+          var val60 = 'CN-19-sribne';
+        }
+        if (val1 === '25205') {
+          var val60 = 'CN-20-talalaivka';
+        }
+        if (val1 === '25215') {
+          var val60 = 'CN-21-chernihivskyi';
+        }
+        if (val1 === '25225') {
+          var val60 = 'CN-22-shchors';
+        }
+        if (val1 === '25271') {
+          var val60 = 'CN-27-1-chernihiv_CNAP';
+        }
+        if (val1 === '25272') {
+          var val60 = 'CN-27-2-chernihiv_VOEN';
+        }
+        if (val1 === '25273') {
+          var val60 = 'CN-27-3-mira44';
+        }
+        if (val1 === '25274') {
+          var val60 = 'СN-27-4-mira116';
+        }
+        if (val1 === '25285') {
+          var val60 = 'CN-28-nizhyn';
+        }
+        if (val1 === '25295') {
+          var val60 = 'CN-29-pryluky';
+        }
 
-            
-            
-        document.getElementById('str').innerHTML = val + ";" + val1 + ";" + val20 + " "+ val3 + ";" + val4 + ";" + val5 + ";" + val60 + " " + val6;
+        document.getElementById('str').innerHTML =
+          val +
+          '<br>' +
+          val1 +
+          '<br>' +
+          val20 +
+          ' ' +
+          val3 +
+          '<br>' +
+          val4 +
+          '<br>' +
+          val5 +
+          '<br>' +
+          val60 +
+          '<br>' +
+          val6;
+
+        // document.getElementById('str').innerHTML = val + ";" + val1 + ";" + val20 + " "+ val3 + ";" + val4 + ";" + val5 + ";" + val60 + " " + val6;
+
         // копируем в буфер обмена
-        copytext('#str');
-         
-    };
-    // Функция копирования в буфер обмена используем библиотеку jQuery 
-   function copytext(el) {
-        var $tmp = $("<textarea>");
-        $("body").append($tmp);
+        // copytext('#str');
+      };
+      // Функция копирования в буфер обмена используем библиотеку jQuery
+      function copytext(el) {
+        var $tmp = $('<textarea>');
+        $('body').append($tmp);
         $tmp.val($(el).text()).select();
-        document.execCommand("copy");
+        document.execCommand('copy');
         $tmp.remove();
-    };
-
+      }
     </script>
-
-</body>
-
+  </body>
 </html>
