@@ -277,24 +277,46 @@
           var val60 = 'CN-29-pryluky';
         }
 
-        document.getElementById('str').innerHTML =
-          '<p>' +
-          val +
-          '<br>' +
-          val1 +
-          '<br>' +
-          val20 +
-          ' ' +
-          val3 +
-          '<br>' +
-          val4 +
-          '<br>' +
-          val5 +
-          '<br>' +
-          val60 +
-          '<br>' +
-          val6 +
-          '</p>';
+           if (val5 === '') {
+          document.getElementById('str').innerHTML =
+               '<p>' +
+               val +
+               '<br>' +
+               val1 +
+               '<br>' +
+               val20 +
+               ' ' +
+               val3 +
+               '<br>' +
+               val4 +
+               '<br>' +
+               val60 +
+               '<br>' +
+               val6 +
+               '</p>';
+        }
+        else
+        {
+             document.getElementById('str').innerHTML =
+               '<p>' +
+               val +
+               '<br>' +
+               val1 +
+               '<br>' +
+               val20 +
+               ' ' +
+               val3 +
+               '<br>' +
+               val4 +
+               '<br>' +
+               val5 +
+               '<br>' +
+               val60 +
+               '<br>' +
+               val6 +
+               '</p>';
+        }
+        
 
         // копируем в буфер обмена
         copytext('#str');
