@@ -277,6 +277,18 @@
           var val60 = 'CN-29-pryluky';
         }
 
+        if (val6 === '' && val === '!' && (val4 === 'A01' || val4 === 'A02' || val4 === 'A03' || val4 === 'A04')) {
+          var val6 = 'Електропостачання відсутнє';
+        }
+        if (val6 === '' && val === 'R' && (val4 === 'A01' || val4 === 'A02' || val4 === 'A03' || val4 === 'A04')) {
+          var val6 = 'Електропостачання відновлене';
+        }
+        if (val6 === '' && val === '!' && (val4 === 'C01' || val4 === 'C03')) { var val6 = 'Зв\'язок відсутній';
+        }
+        if (val6 === '' && val === 'R' && (val4 === 'C01' || val4 === 'C03')) {
+          var val6 = 'Зв\'язок відновлений';
+        }
+
            if (val5 === '') {
           document.getElementById('str').innerHTML =
                '<p>' +
