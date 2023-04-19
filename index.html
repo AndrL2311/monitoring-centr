@@ -216,6 +216,7 @@
         var val7 = document.getElementById('adminBezpeki').value;
         var val8 = document.getElementById('vrm').value;
         var val61;
+        var val62;
 
         if (val1 === 'allArea') {
           var val60 = '25001 Чернігівська область';
@@ -306,14 +307,17 @@
         if (val60 !== '') {
           if (val1 === 'allArea'){
             val61 = val60;
+            val62 = val60;
           }
           else 
           {
             val61 =  val1 + '<br>' + val60;
+            val62 = val1 + ' ' + val60;
           }
         } 
         if (val8 !== '') {
           val61 = val8;
+          val62 = val8;
         }
         
         if (val6 === '' && val === '!' && (val4 === 'A01' || val4 === 'A02' || val4 === 'A03' || val4 === 'A04')) {
@@ -368,7 +372,7 @@
         if (val === '!' && val7 !== '') {
           const site_url = "https://script.google.com/macros/s/AKfycbxu_AV9J-tOjzhLgfRPvJrIjlrN3cacdSgZtVaoN25qYpzcO0lOgTwSeM1fk6ygWnp0PQ/exec?p2=" 
         + val20 + " " + val3 +
-        "&p3="+ val61 +
+        "&p3="+ val62 +
         "&p4="+ val7 +
         "&p5="+ val6 +
         "&p6=Позаштатна ситуація" +
