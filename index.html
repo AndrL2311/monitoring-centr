@@ -36,6 +36,8 @@
         <div>
           <label for="area">Район:</label>
           <select class="pole" id="area" name="area">
+            <option value=""></option>
+            <option value="allArea">25001 Чернігівська область</option>
             <option value="25001">25001 Головне</option>
             <option value="25015">25015 Бахмацький</option>
             <option value="25025">25025 Бобровицький</option>
@@ -64,6 +66,11 @@
             <option value="25285">25285 Нежин</option>
             <option value="25295">25295 Прилуки</option>
           </select>
+        </div>
+
+        <div>
+          <label for="vrm-text">Віддалене робоче місце ( ):</label>
+          <input class="pole" type="text" name="vrm-text" id="vrm-text" />
         </div>
 
         <div>
@@ -207,6 +214,10 @@
         var val5 = document.getElementById('time-to-fix').value;
         var val6 = document.getElementById('event-description').value;
         var val7 = document.getElementById('adminBezpeki').value;
+
+        if (val1 === 'allArea') {
+          var val60 = 'Чернігівська область';
+        }
 
         if (val1 === '25001') {
           var val60 = 'CN-00-Golovne';
