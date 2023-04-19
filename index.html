@@ -69,8 +69,8 @@
         </div>
 
         <div>
-          <label for="vrm-text">Віддалене робоче місце ( ):</label>
-          <input class="pole" type="text" name="vrm-text" id="vrm-text" />
+          <label for="vrm">Віддалене робоче місце ( ):</label>
+          <input class="pole" type="text" name="vrm" id="vrm" />
         </div>
 
         <div>
@@ -214,9 +214,11 @@
         var val5 = document.getElementById('time-to-fix').value;
         var val6 = document.getElementById('event-description').value;
         var val7 = document.getElementById('adminBezpeki').value;
+        var val8 = document.getElementById('vrm').value;
+        var val61;
 
         if (val1 === 'allArea') {
-          var val60 = 'Чернігівська область';
+          var val60 = '25001 Чернігівська область';
         }
 
         if (val1 === '25001') {
@@ -301,6 +303,19 @@
           var val60 = 'CN-29-pryluky';
         }
 
+        if (val60 !== '') {
+          if (val1 === 'allArea'){
+            val61 = val60;
+          }
+          else 
+          {
+            val61 =  val1 + '<br>' + val60;
+          }
+        } 
+        if (val8 !== '') {
+          val61 = val8;
+        }
+        
         if (val6 === '' && val === '!' && (val4 === 'A01' || val4 === 'A02' || val4 === 'A03' || val4 === 'A04')) {
           var val6 = 'Електропостачання відсутнє';
         }
@@ -318,9 +333,7 @@
                '<p>' +
                val +
                '<br>' +
-               val1 +
-               '<br>' +
-               val60 +
+               val61 +
                '<br>' +
                val3 +
                ' ' +
@@ -337,9 +350,7 @@
                '<p>' +
                val +
                '<br>' +
-               val1 +
-               '<br>' +
-               val60 +
+               val61 +
                '<br>' +
                val3 +
                ' ' +
@@ -357,7 +368,7 @@
         if (val === '!' && val7 !== '') {
           const site_url = "https://script.google.com/macros/s/AKfycbxu_AV9J-tOjzhLgfRPvJrIjlrN3cacdSgZtVaoN25qYpzcO0lOgTwSeM1fk6ygWnp0PQ/exec?p2=" 
         + val20 + " " + val3 +
-        "&p3="+ val60 +
+        "&p3="+ val61 +
         "&p4="+ val7 +
         "&p5="+ val6 +
         "&p6=Позаштатна ситуація" +
