@@ -181,6 +181,7 @@
         <button class="button" id="butt" type="button">
           Сформувати повідомлення та скопіювати в буфер обміну
         </button>
+
         <!-- <button onclick="copytext('#str')" type="button"  >Скопіювати в буфер</button> -->
       </form>
       <div id="str"></div>
@@ -332,9 +333,20 @@
         }
         
 
+        if (val === '!') {
+          const site_url = "https://script.google.com/macros/s/AKfycbxu_AV9J-tOjzhLgfRPvJrIjlrN3cacdSgZtVaoN25qYpzcO0lOgTwSeM1fk6ygWnp0PQ/exec?p2=" 
+        + val20 + " " + val3 +
+        "&p3="+ val60 +
+        "&p4=Липовецький Андрій Сергійович"+
+        "&p5="+ val6 +
+        "&p6=Позаштатна ситуація" +
+        "&p10=Моніторинговий центр&p12=Інцидент усунено";
+          window.open(site_url, "_blank", "toolbar = yes, top = 500, left = 500, width = 400, height = 400");
+        }
         // копируем в буфер обмена
         copytext('#str');
       };
+      
       // Функция копирования в буфер обмена используем библиотеку jQuery
       function copytext(el) {
         var $tmp = $('<textarea>');
