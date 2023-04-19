@@ -178,6 +178,15 @@
             rows="10"
           ></textarea>
         </div>
+        <div>
+          <label for="adminBezpeki">Адмін безпеки:</label>
+          <select class="pole" id="adminBezpeki" name="adminBezpeki">
+            <option value=""></option>
+            <option value="Липовецький Андрій Сергійович">Липовецький Андрій Сергійович</option>
+            <option value="Колесник Євгеній Олександрович">Колесник Євгеній Олександрович</option>
+            <option value="Лазаренко Сергій Миколайович">Лазаренко Сергій Миколайович</option>
+          </select>
+        </div>
         <button class="button" id="butt" type="button">
           Сформувати повідомлення та скопіювати в буфер обміну
         </button>
@@ -197,6 +206,7 @@
         var val4 = document.getElementById('event-code').value;
         var val5 = document.getElementById('time-to-fix').value;
         var val6 = document.getElementById('event-description').value;
+        var val7 = document.getElementById('adminBezpeki').value;
 
         if (val1 === '25001') {
           var val60 = 'CN-00-Golovne';
@@ -333,11 +343,11 @@
         }
         
 
-        if (val === '!') {
+        if (val === '!' && val7 !== '') {
           const site_url = "https://script.google.com/macros/s/AKfycbxu_AV9J-tOjzhLgfRPvJrIjlrN3cacdSgZtVaoN25qYpzcO0lOgTwSeM1fk6ygWnp0PQ/exec?p2=" 
         + val20 + " " + val3 +
         "&p3="+ val60 +
-        "&p4=Липовецький Андрій Сергійович"+
+        "&p4="+ val7 +
         "&p5="+ val6 +
         "&p6=Позаштатна ситуація" +
         "&p10=Моніторинговий центр&p12=Інцидент усунено";
