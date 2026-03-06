@@ -75,16 +75,20 @@
           <label for="event-date">Дата події:</label>
           <input class="pole" type="date" name="event-date" id="event-date" />
         </div>
+        <script>
+          const today = new Date().toISOString().split('T')[0];
+          document.getElementById("event-date").value = today;
+        </script>
         <div>
-          <label for="event-time">Час події:</label>
-          <input
-            class="pole"
-            type="time"
-            name="event-time"
-            id="event-time"
-            value="08:00"
-          />
+     <label for="event-time">Час події:</label>
+    <input class="pole" type="time" name="event-time" id="event-time" />
         </div>
+        <script>
+          const now = new Date();
+          const hours = String(now.getHours()).padStart(2, '0');
+          const minutes = String(now.getMinutes()).padStart(2, '0');
+          document.getElementById("event-time").value = hours + ":" + minutes;
+        </script>
         <div>
           <label for="event-code">Код події:</label>
           <select class="pole" name="event-code" id="event-code">
