@@ -395,17 +395,30 @@
           window.open(site_url, "_blank", "toolbar = yes, top = 500, left = 500, width = 400, height = 400");
         }
         // копируем в буфер обмена
-        copytext('#str');
+        //copytext('#str');
+        copyText();
       };
       
       // Функция копирования в буфер обмена используем библиотеку jQuery
-      function copytext(el) {
-        var $tmp = $('<textarea>');
-        $('body').append($tmp);
-        $tmp.val($(el).text()).select();
-        document.execCommand('copy');
-        $tmp.remove();
-      }
+      function copyText() {
+         const text = document.getElementById('str').innerText
+
+          navigator.clipboard.writeText(text)
+            .then(() => {
+              console.log ('Скопійовано в буфер обміну');
+            })
+            .catch(err => {
+             console.error('Помилка копіювання: ', err);
+            });
+        }
+
+      //function copytext(el) {
+      //  var $tmp = $('<textarea>');
+      //  $('body').append($tmp);
+      //  $tmp.val($(el).text()).select();
+      //  document.execCommand('copy');
+      //  $tmp.remove();
+      //}
     </script>
   </body>
 </html>
