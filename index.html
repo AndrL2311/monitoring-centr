@@ -67,7 +67,7 @@
         </div>
 
         <div>
-          <label for="vrm">Віддалене робоче місце ( ):</label>
+          <label for="vrm">Віддалене робоче місце або камера:</label>
           <input class="pole" type="text" name="vrm" id="vrm" />
         </div>
 
@@ -296,8 +296,19 @@
           }
         } 
         if (val8 !== '') {
-          val61 = val8;
-          val62 = val8;
+          if (val === 'A') {
+            if (val1 === 'allArea') {
+              val61 = val60 + '<br>' + val8;;
+              val62 = val60 + '<br>' + val8;;
+            }
+            else {
+              val61 = val1 + '<br>' + val8;
+              val62 = val1 + '<br>' + val8;
+            }
+          } else {
+            val61 = val8;
+            val62 = val8;
+          }
         }
         
         if (val6 === '' && val === '!' && (val4 === 'A1' || val4 === 'A2' || val4 === 'A3')) {
